@@ -45,11 +45,12 @@
 ;; Smartparens
 (require 'smartparens-config)
 (smartparens-global-mode t)
+
 ;; Misc
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 (global-company-mode 1)
 (global-hl-line-mode t)
-
+(global-auto-revert-mode t)
 (require 'hungry-delete)
 (global-hungry-delete-mode)
 
