@@ -53,7 +53,7 @@
 (global-auto-revert-mode t)
 (require 'hungry-delete)
 (global-hungry-delete-mode)
-
+(setq ring-bell-function 'ignore)
 
 ;; Theme
 (load-theme 'monokai t)
