@@ -1,19 +1,23 @@
-;; Close Tool Bar
-(tool-bar-mode -1)
+;; Some optimization
+(setq gc-cons-threshold-original gc-cons-threshold)
+(setq gc-cons-threshold (* 1024 1024 100))
 
-;; Close Scroll Bar
-(scroll-bar-mode -1)
+;; Load Path
+(defun add-subdirs-to-load-path(dir)
+  "Recursive add directories to `load-path`."
+  (let ((default-directory (file-name-as-directory dir)))
+    (add-to-list 'load-path dir)
+    (normal-top-level-add-subdirs-to-load-path)))
+(add-subdirs-to-load-path "~/.emacs.d/lisp")
 
-;; Line Number
-(global-linum-mode 1)
-
+(require 'init-packages)
+(require 'init-ui)
 ;; Set Cursor Type to Bar
 (setq-default cursor-type 'bar)
 
 (defun open-init-file()
   (interactive)
-  (find-file "~/.emacs.d/init.el")
-  )
+  (find-file "~/.emacs.d/init.el"))
 
 ;; Turn off backup files
 (setq make-backup-files nil)
@@ -58,47 +62,6 @@
 ;; Theme
 (load-theme 'monokai t)
 
-;; Package
-(when (>= emacs-major-version 24)
-     (require 'package)
-     (package-initialize)
-     (setq package-archives '(("gnu" . "https://mirrors.ustc.edu.cn/elpa/gnu/")
-                         ("melpa" . "https://mirrors.ustc.edu.cn/elpa/melpa/")
-                         ("melpa-stable" . "https://mirrors.ustc.edu.cn/elpa/melpa-stable/")
-                         ("org" . "https://mirrors.ustc.edu.cn/elpa/org/"))))
-
- ;; cl - Common Lisp Extension
- (require 'cl)
-
- ;; Add Packages
- (defvar my/packages '(
-		;; --- Auto-completion ---
-		company
-		;; --- Themes ---
-		monokai-theme
-		;; solarized-theme
-		restart-emacs
-		hungry-delete
-		smex
-		swiper
-		counsel
-		ivy
-		smartparens
-    		) "Default packages")
-
- (setq package-selected-packages my/packages)
-
- (defun my/packages-installed-p ()
-     (loop for pkg in my/packages
-	   when (not (package-installed-p pkg)) do (return nil)
-	   finally (return t)))
-
- (unless (my/packages-installed-p)
-     (message "%s" "Refreshing package database...")
-     (package-refresh-contents)
-     (dolist (pkg my/packages)
-       (when (not (package-installed-p pkg))
-	 (package-install pkg))))
 
  ;; Find Executable Path on OS X
  (when (memq window-system '(mac ns))
@@ -117,4 +80,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.08)
- '(company-minimum-prefix-length 1))
+ '(company-minimum-prefix-length 1)
+ '(package-selected-packages
+   '(fira-code-mode company monokai-theme restart-emacs hungry-delete smex swiper counsel ivy smartparens use-package)))
