@@ -1,4 +1,5 @@
-;; Package
+;;; package --- Summary:
+;;; Code:
 (when (>= emacs-major-version 24)
      (require 'package)
      (package-initialize)
@@ -51,3 +52,4 @@
       use-package-verbose t)
 
 (provide 'init-packages)
+;;; init-packages.el ends here
