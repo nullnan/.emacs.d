@@ -45,6 +45,7 @@
 
 ;; Some optimization for use-package
 
+(require 'use-package-ensure)
 (setq use-package-always-ensure t
       use-package-always-defer t
       use-package-always-demand nil

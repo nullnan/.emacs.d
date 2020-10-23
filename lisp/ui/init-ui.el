@@ -21,7 +21,7 @@
     (global-display-line-numbers-mode t))
 
 ;; Set Theme
-(use-package monokai
+(use-package monokai-theme
   :init (load-theme 'monokai t))
 
 ;; Set Fira Code Font
