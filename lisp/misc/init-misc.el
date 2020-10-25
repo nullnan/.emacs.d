@@ -11,6 +11,10 @@
 ;; Turn off backup files
 (setq make-backup-files nil)
 
+(setq custom-file
+    (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
+
 (use-package ivy 
   :defer 1 
   :demand 
