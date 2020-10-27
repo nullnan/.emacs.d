@@ -12,9 +12,12 @@
 (add-subdirs-to-load-path "~/.emacs.d/lisp")
 
 (require 'init-packages)
-(require 'init-ui)
-(require 'init-code)
 (require 'init-custom)
-(require 'init-editor)
 (require 'init-misc)
+(require 'init-ui)
+(require 'init-editor)
+(require 'init-code)
 
+
+
+;;(message *is-gui*)

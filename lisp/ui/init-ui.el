@@ -6,13 +6,14 @@
   (scroll-bar-mode -1)
   ;; Line Number
   ;; (global-linum-mode 1)
+  (if (not (graphic-p))
+      (menu-bar-mode -1))
   ;; Highlight Line
   (global-hl-line-mode t)
   (global-auto-revert-mode t)
   ;; Set Cursor Type to Bar
   (setq-default cursor-type 'bar)
   )
-
 
 
 
@@ -27,8 +28,9 @@
   :init (load-theme 'monokai t))
 
 ;; Set Fira Code Font
-(use-package fira-code-mode
-  :custom (fira-code-mode-disabled-ligatures '("[]" "x"))  ; ligatures you don't want
-  :hook prog-mode)                                         ; mode to enable fira-code-mode in
+(if (graphic-p)
+    (use-package fira-code-mode
+      :custom (fira-code-mode-disabled-ligatures '("[]" "x"))  ; ligatures you don't want
+      :hook prog-mode))                                         ; mode to enable fira-code-mode in
 
 (provide 'init-ui)
