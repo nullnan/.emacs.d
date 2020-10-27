@@ -2,20 +2,20 @@
   :bind (("<f5>" . 'restart-emacs)))
 
 (use-package emacs
-  :config (setq ring-bell-function 'ignore))
+  :config
+  ;; Turn off some anoyed feature
+  (setq ring-bell-function 'ignore)
+  (defalias 'yes-or-no-p 'y-or-n-p)
+  (setq inhibit-startup-screen t)
+  ;; Turn off backup files
+  (setq make-backup-files nil))
 
-(defalias 'yes-or-no-p 'y-or-n-p)
-
-(setq inhibit-startup-screen t)
-
-;; Turn off backup files
-(setq make-backup-files nil)
-
-(setq custom-file
-    (expand-file-name "custom.el" user-emacs-directory))
-
-(when (file-exists-p custom-file)
-  (load-file custom-file))
+(use-package emacs
+  :config (setq custom-file
+		(expand-file-name "custom.el" user-emacs-directory))
+  (when (file-exists-p custom-file)
+    (load-file custom-file))
+)
 
 
 (use-package ivy 

@@ -1,18 +1,20 @@
- ;; Set Cursor Type to Bar
-(setq-default cursor-type 'bar)
+(use-package emacs
+  :config
+  ;; Close Tool Bar
+  (tool-bar-mode -1)
+  ;; Close Scroll Bar
+  (scroll-bar-mode -1)
+  ;; Line Number
+  ;; (global-linum-mode 1)
+  ;; Highlight Line
+  (global-hl-line-mode t)
+  (global-auto-revert-mode t)
+  ;; Set Cursor Type to Bar
+  (setq-default cursor-type 'bar)
+  )
 
-;; Close Tool Bar
-(tool-bar-mode -1)
 
-;; Close Scroll Bar
-(scroll-bar-mode -1)
 
-;; Line Number
-;; (global-linum-mode 1)
-
-;; Highlight Line
-(global-hl-line-mode t)
-(global-auto-revert-mode t)
 
 ;; Set Relative Line Number
 (use-package emacs 
