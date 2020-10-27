@@ -18,6 +18,3 @@
 (require 'init-editor)
 (require 'init-code)
 
-
-
-;;(message *is-gui*)

@@ -2,7 +2,7 @@
   :bind ("C-c k" . crux-smart-kill-line))
 
 (use-package hungry-delete
-  :config (global-hungry-delete-mode t))
+  :init (global-hungry-delete-mode))
 
 (use-package drag-stuff 
   :bind (("<M-up>". drag-stuff-up) 
