@@ -5,7 +5,9 @@
 (require 'init-lsp)
 (require 'init-projectile)
 
-;;; Code:
+;; Import different languages settings
+(require 'init-lang)
+
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
