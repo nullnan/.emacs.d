@@ -5,8 +5,15 @@
             (lsp-mode . lsp-enable-which-key-integration))
     :commands (lsp lsp-deferred))
 
+(use-package lsp-ui
+  :commands lsp-ui-mode
+  :hook (lsp-mode . lsp-ui-mode)
+  :init (setq lsp-ui-doc-enable t
+	      lsp-ui-doc-position 'at-point
+	      lsp-ui-doc-delay 0.3
+	      lsp-ui-imenu-enable t
+	      lsp-ui-sideline-enable t))
 ;; optionally
-(use-package lsp-ui :commands lsp-ui-mode)
 (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 
 
