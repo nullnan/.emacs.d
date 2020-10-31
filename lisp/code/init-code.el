@@ -3,6 +3,7 @@
 (require 'init-company)
 (require 'init-flycheck)
 (require 'init-lsp)
+(require 'init-projectile)
 
 ;;; Code:
 (use-package flycheck

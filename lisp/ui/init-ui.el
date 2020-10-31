@@ -42,4 +42,10 @@
       (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol")
       :hook prog-mode))                                         ; mode to enable fira-code-mode in
 
+(use-package ivy-posframe
+  :init (setq ivy-posframe-display-functions-alist
+      '((swiper          . ivy-posframe-display-at-frame-center)
+        (complete-symbol . ivy-posframe-display-at-point)
+        (t               . ivy-posframe-display-at-frame-center)))
+  (ivy-posframe-mode 1))
 (provide 'init-ui)
