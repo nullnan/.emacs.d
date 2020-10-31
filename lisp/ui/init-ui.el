@@ -27,6 +27,10 @@
 (use-package monokai-theme
   :init (load-theme 'monokai t))
 
+;; Set Powerline
+(use-package powerline
+  :init (powerline-default-theme))
+
 ;; Set Fira Code Font
 (if (graphic-p)
     (use-package fira-code-mode

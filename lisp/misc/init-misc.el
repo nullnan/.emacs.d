@@ -10,7 +10,11 @@
   (defalias 'yes-or-no-p 'y-or-n-p)
   (setq inhibit-startup-screen t)
   ;; Turn off backup files
-  (setq make-backup-files nil))
+  (setq make-backup-files nil)
+  
+  (if (and (fboundp 'native-comp-available-p)
+       (native-comp-available-p))
+  (setq comp-deferred-compilation t)))
 
 (use-package emacs
   :config (setq custom-file
