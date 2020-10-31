@@ -6,8 +6,6 @@
 (require 'init-projectile)
 
 ;;; Code:
-(use-package flycheck
-  :hook (after-init . global-flycheck-mode))
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
