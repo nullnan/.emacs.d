@@ -31,6 +31,11 @@
 (if (graphic-p)
     (use-package fira-code-mode
       :custom (fira-code-mode-disabled-ligatures '("[]" "x"))  ; ligatures you don't want
+      :config ;;; Fira code
+      ;; This works when using emacs --daemon + emacsclient
+      (add-hook 'after-make-frame-functions (lambda (frame) (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol")))
+      ;; This works when using emacs without server/client
+      (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol")
       :hook prog-mode))                                         ; mode to enable fira-code-mode in
 
 (provide 'init-ui)
