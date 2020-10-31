@@ -2,7 +2,7 @@
 
 (require 'init-company)
 (require 'init-flycheck)
-
+(require 'init-lsp)
 
 ;;; Code:
 (use-package flycheck

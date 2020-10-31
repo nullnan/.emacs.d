@@ -8,6 +8,8 @@
                          ("melpa-stable" . "https://mirrors.ustc.edu.cn/elpa/melpa-stable/")
                          ("org" . "https://mirrors.ustc.edu.cn/elpa/org/"))))
 
+
+(setq byte-compile-warnings '(cl-functions))
  ;; cl - Common Lisp Extension
  (require 'cl)
 

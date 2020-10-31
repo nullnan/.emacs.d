@@ -1,3 +1,5 @@
+(require 'init-eaf)
+
 (use-package restart-emacs
   :bind (("<f5>" . 'restart-emacs)))
 
