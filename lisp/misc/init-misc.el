@@ -1,4 +1,5 @@
 (require 'init-eaf)
+(require 'init-pyim)
 
 (use-package restart-emacs
   :bind (("<f5>" . 'restart-emacs)))
