@@ -38,6 +38,8 @@
         ivy-re-builders-alist '((t . ivy--regex-ignore-order))) 
   ) 
 
+(use-package ivy-fuz)
+
 (use-package counsel 
   :after (ivy) 
   :bind (("M-x" . counsel-M-x) 
