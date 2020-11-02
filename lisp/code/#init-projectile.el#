@@ -15,7 +15,7 @@
             (concat "rg -0 --files --color=never --hidden" rg-cmd))))
 
   ;; Faster searching on Windows
-  (when sys/win32p
+  (when *is-windows*
     (when (or (executable-find "fd") (executable-find "rg"))
       (setq projectile-indexing-method 'alien
             projectile-enable-caching nil))

@@ -37,8 +37,10 @@
         enable-recursive-minibuffers t 
         ivy-re-builders-alist '((t . ivy--regex-ignore-order))) 
   ) 
-
-(use-package ivy-fuz)
+(use-package ivy-rich
+  :init (ivy-rich-mode 1))
+(use-package ivy-fuz
+  :disabled)
 
 (use-package counsel 
   :after (ivy) 
