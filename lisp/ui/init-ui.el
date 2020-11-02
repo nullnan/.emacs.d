@@ -40,8 +40,7 @@
       (add-hook 'after-make-frame-functions (lambda (frame) (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol")))
       ;; This works when using emacs without server/client
       (set-fontset-font t '(#Xe100 . #Xe16f) "Fira Code Symbol")
-      :hook prog-mode))                                         ; mode to enable fira-code-mode in
-
+      :config (global-fira-code-mode)))  
 (use-package ivy-posframe
   :init (setq ivy-posframe-display-functions-alist
       '((swiper          . ivy-posframe-display-at-frame-center)
