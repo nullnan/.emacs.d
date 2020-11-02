@@ -1,1 +1,2 @@
-* This Repository has my emacs config
+* Void Emacs
+This Reposity has null's emacs configure.
