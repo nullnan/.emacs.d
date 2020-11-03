@@ -1,5 +1,6 @@
 (require 'init-eaf)
 (require 'init-pyim)
+(use-package vterm)
 
 (use-package restart-emacs
   :bind (("<f5>" . 'restart-emacs)))

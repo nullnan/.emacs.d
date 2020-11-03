@@ -8,6 +8,10 @@
   :bind (("<M-up>". drag-stuff-up) 
          ("<M-down>" . drag-stuff-down)))
 
+(use-package smooth-scrolling
+  :hook (after-init . smooth-scrolling-mode)
+  :config (setq smooth-scroll-margin 3))
+
 (require 'init-treemacs)
 
 (provide 'init-editor)

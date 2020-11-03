@@ -1,3 +1,4 @@
+
 (use-package emacs
   :config
   ;; Close Tool Bar
