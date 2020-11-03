@@ -9,7 +9,6 @@
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
 
-(add-subdirs-to-load-path "~/.emacs.d/site-lisp/emacs-application-framework")
 (add-subdirs-to-load-path "~/.emacs.d/lisp")
 
 (require 'init-packages)

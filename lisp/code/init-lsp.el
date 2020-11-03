@@ -18,6 +18,6 @@
 	      lsp-ui-sideline-ignore-duplicate t))
 ;; optionally
 (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
-
+(use-package lsp-treemacs)
 
 (provide 'init-lsp)
