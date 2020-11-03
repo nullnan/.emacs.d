@@ -23,7 +23,8 @@
   (setq pyim-page-length 7)
 
   (setq pyim-dicts
-      '((:name "computer" :file "/home/null/.emacs.d/dicts/computer.pyim")))
+	'((:name "computer" :file "/home/null/.emacs.d/dicts/computer.pyim")
+	  (:name "bigdict" :file "/home/null/.emacs.d/dicts/pyim-bigdict.pyim")))
   (add-hook 'emacs-startup-hook
           #'(lambda () (pyim-restart-1 t)))
   
