@@ -13,5 +13,6 @@
   :config (setq smooth-scroll-margin 3))
 
 (require 'init-treemacs)
+(require 'init-yas)
 
 (provide 'init-editor)
