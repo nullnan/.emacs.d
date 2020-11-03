@@ -16,4 +16,9 @@
 		        company-echo-delay 0
 		        company-tooltip-offset-display 'scrollbar
 		        company-begin-commands '(self-insert-command)))
+
+(use-package company-posframe
+  :after company
+  :init (company-posframe-mode 1))
+
 (provide 'init-company)
