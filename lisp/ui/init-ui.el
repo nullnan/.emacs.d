@@ -25,8 +25,8 @@
     (global-display-line-numbers-mode t))
 
 ;; Set Theme
-(use-package monokai-theme
-  :init (load-theme 'monokai t))
+(use-package nord-theme
+  :init (load-theme 'nord t))
 
 ;; Set Powerline
 (use-package powerline
