@@ -25,8 +25,8 @@
   (setq pyim-dicts
 	'((:name "computer" :file "/home/null/.emacs.d/dicts/computer.pyim")
 	  (:name "bigdict" :file "/home/null/.emacs.d/dicts/pyim-bigdict.pyim")))
-  (add-hook 'emacs-startup-hook
-          #'(lambda () (pyim-restart-1 t)))
+  ;;(add-hook 'emacs-startup-hook
+   ;;       #'(lambda () (pyim-restart-1 t)))
   
   :bind
   (("M-j" . pyim-convert-string-at-point) ;与 pyim-probe-dynamic-english 配合
